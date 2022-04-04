@@ -1,0 +1,44 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage[english, russian]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[intlimits]{amsmath}
+
+\title{Вычисление интеграла}
+\author{Гончар Дарья, 7 группа }
+\date{}
+\thispagestyle{empty}
+\begin{document}
+
+\textbf{Гончар Дарья, 7 группа}
+\paragraph{}
+Вычислить интеграл  \begin{equation*}
+\oint\limits_C \frac{e^z}{(z-i)^2(z+2)}\, \mathrm{d} z \end{equation*}
+
+в следующих случаях задания контура: а) |z\big-i|=2 ;   б) |z+2\big-i|=3
+\paragraph{Решение:}
+Найдем особые точки подынтегральной функции. Ими являются нули знаменателя: z=i, z=\big-2.
+\paragraph{}
+a) В круг контура |z\big-i|=2 попадает только точка z=i, вычисляем интеграл:
+\begin{equation*} \oint\limits_C \frac{e^z}{(z-i)^2(z+2)}\, \mathrm{d} z = \int\limits_{|z-i|=2} \frac{\frac{e^z}{z+2}}{(z-i)^2}\, \mathrm{d} z  = 2\pi i\Bigg(\frac{e^z}{z+2}\Bigg)^{'} \Bigg|_{z=i} = 
+\end{equation*} 
+\begin{equation*}
+   = 2\pi i\Bigg(\frac{e^z(z+2)-e^z}{(z+2)^2}\Bigg)\Bigg|_{z=i} = 2\pi i\frac{e^i(1+i)}{(2+i)^2} 
+\end{equation*}
+
+\paragraph{}
+б) В круг контура |z+2\big-i|=3 попадают две точки z=i и z=\big-2. Поэтому находим интеграл как сумму двух интегралов по контурам, которые включают в себя только одну из двух точек. Вычисляем интеграл:
+\begin{equation*} \oint\limits_C \frac{e^z}{(z-i)^2(z+2)}\, \mathrm{d} z = \int\limits_{C_1} \frac{e^z}{(z-i)^2(z+2)}\, \mathrm{d} z + \int\limits_{C_2} \frac{e^z}{(z-i)^2(z+2)}\, \mathrm{d} z=\end{equation*}
+\begin{equation*}
+\int\limits_{C_1} \frac{\frac{e^z}{z+2}}{(z-i)^2}\, \mathrm{d} z  + \int\limits_{C_2} \frac{\frac{e^z}{(z-i)^2}}{z+2}\, \mathrm{d} z = 2\pi i\Bigg(\frac{e^z}{z+2}\Bigg)^{'} \Bigg|_{z=i} + 2\pi i\Bigg(\frac{e^z}{(z-i)^2}\Bigg) \Bigg|_{z=-2} = 
+\end{equation*} 
+\paragraph{}
+\begin{equation*}
+   = 2\pi i\Bigg(\frac{e^z(z+2)-e^z}{(z+2)^2}\Bigg)\Bigg|_{z=i} +  2\pi i\frac{e^{\big-2}}{(\big-2\big-i)^2} = 2\pi i\frac{e^i(1+i)}{(2+i)^2} + 2\pi i\frac{e^{\big-2}}{(2+i)^2} = 
+\end{equation*}
+\paragraph{}
+\begin{equation*}
+  = \frac{2\pi i}{(2+i)^2} \Big(e^i(1+i)+e^{\big-2}\Big)
+\end{equation*}
+\end{document}
